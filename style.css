@@ -1,0 +1,122 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dfe1e2;
+}
+
+header.topbar {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 20px 30px;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 32px;
+    text-align: center;
+}
+
+.project-info {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #ffffffb3;
+}
+
+.project-info strong {
+    color: #ffdd57;
+}
+
+.student-id {
+    color: #ffdd57;
+    font-weight: bold;
+}
+
+.topbar nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 20px 0 0 0;
+    margin: 0;
+}
+
+.topbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    font-size: 15px;
+}
+
+.topbar nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.content {
+    padding: 30px;
+    background: #ffffff;
+}
+
+section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 50px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+button, input[type="submit"] {
+    background: #ff6f61;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    align-items: center;
+    width: 72%;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #e05245;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 70%;
+    margin-left: 180px;
+}
+
+footer {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+img {
+    border: black;
+    margin: none;
+}

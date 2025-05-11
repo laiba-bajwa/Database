@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="header-content">
+            <h1>📚 Library Management System</h1>
+            <div class="project-info">
+                <p><strong>Instructor:</strong> Miss Ammarah Javed</p>
+                <p><strong>Presented By:</strong> Laiba Bajwa <span class="student-id">(23021519-042)</span></p>
+                <p><strong>Presented By:</strong> Tasmia Anwer<span class="student-id">(23021519-131)</span></p>
+            </div>
+        </div>
+    
+        <nav>
+            <ul>
+                <li><a href="#books">📖 Book Management</a></li>
+                <li><a href="#issue">📦 Issue Books</a></li>
+                <li><a href="#fines">💰 Fines</a></li>
+                <li><a href="#reservations">📌 Reservations</a></li>
+                <li><a href="#study-rooms">🏢 Study Rooms</a></li>
+                <li><a href="#members">👥 Add Member</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Book Management Section -->
+    <section id="books">
+        <h2>📖 Add Books</h2>
+        <form id="addBookForm">
+            <input type="text" id="title" name="title" placeholder="Book Title" required>
+            <input type="text" id="author" name="author" placeholder="Author" required>
+            <input type="text" id="isbn" name="isbn" placeholder="ISBN" required>
+            <input type="submit" value="Add Book">
+        </form>
+
+        <h3>📚 Book List</h3>
+        <ul id="bookList"></ul> <!-- Book list will be displayed here -->
+    </section>
+
+    <!-- Issue Book Section -->
+    <section id="issue">
+        <h2>📦 Issue Books</h2>
+        <form id="issueBookForm">
+            <input type="number" id="bookId" placeholder="Book ID" required>
+            <input type="number" id="memberId" placeholder="Member ID" required>
+            <label>Issue Date:</label>
+            <input type="date" id="issue_date" required>
+            <label>Due Date:</label>
+            <input type="date" id="due_date" required>
+            <input type="submit" value="Issue a Book">
+        </form>
+        <ul id="issuedBookList"></ul>
+    </section>
+    
+
+    <!-- Reservation Section -->
+    <section id="reservations">
+        <h2>📌 Book Reservations</h2>
+        <form id="reserveBookForm">
+            <input type="number" id="reserveBookId" name="book_id" placeholder="Book ID" required>
+            <input type="number" id="reserveMemberId" name="member_id" placeholder="Member ID" required>
+            <label>Reserve Date:</label>
+            <input type="date" id="reserve_date" required>
+            <input type="submit" value="Reserve Book">
+        </form>
+
+        <h3>📚 Reserved Books</h3>
+        <ul id="reservedBookList"></ul> <!-- Reserved book list will be displayed here -->
+    </section>
+
+    <!-- Add Member Section -->
+    <section id="members">
+        <h2>👥 Add Member</h2>
+        <form id="addMemberForm">
+            <input type="text" id="memberName" name="name" placeholder="Member Name" required>
+            <input type="email" id="memberEmail" name="email" placeholder="Member Email" required>
+            <input type="tel" id="memberContact" name="contact" placeholder="Member Contact" required>
+            <input type="submit" value="Add Member">
+        </form>
+
+        <h3>👥 Member List</h3>
+        <ul id="memberList"></ul> <!-- Member list will be displayed here -->
+    </section>
+
+    <section id="fines">
+        <h2>💰 Fines Management</h2>
+        <form id="manageFinesForm">
+            <input type="number" id="fineMemberId" placeholder="Member ID" required><br>
+            <input type="number" id="fineAmount" placeholder="Fine Amount" required><br>
+            <input type="submit" value="Manage Fines">
+        </form>
+    </section>
+
+    <!-- Study Room Booking Section -->
+    <section id="study-rooms">
+        <h2>🏢 Study Room Booking</h2>
+        <form id="bookStudyRoomForm">
+          <input type="number" id="room_id" placeholder="Room ID" required>
+          <input type="number" id="study_member_id" placeholder="Member ID" required>
+          <label>Booking Date:</label>
+          <input type="date" id="booking_date" required>
+          <input type="number" id="duration_hours" placeholder="Duration (in hours)" required>
+          <input type="submit" value="Book Study Room">
+        </form>
+        <ul id="studyRoomBookingList"></ul>
+      </section>
+    
+
+    <footer>
+        <p>&copy; 2025 All Copy Rights Reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
